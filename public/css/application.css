@@ -1,0 +1,27 @@
+body{
+  margin: auto;
+  padding: 2%;
+  background-image: url(../../assets/images/IIR_index_background.png);
+  background-size: 100% 100%;
+  background-attachment: fixed;
+}
+
+.cloud-text{
+  /*font-family: "Bookman Old Style";*/
+  font-family: "Arial";
+  color: white;
+  text-shadow: 1px 1px black;
+}
+
+#main-content {
+    position: absolute;
+    width: 100%;
+    bottom: 30%;
+    text-align: center;
+}
+
+footer{
+  position: absolute;
+  bottom:0;
+  right: 12px;
+}
