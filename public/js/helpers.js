@@ -6,4 +6,8 @@ var Helpers = function(){
   this.clearContent = function(){
     $('#main-content').text('');
   }
+
+  this.updateContent = function(txt){
+    $('#main-content').html("<h1 class='cloud-text'>" + txt + "</h1>");
+  }
 }
