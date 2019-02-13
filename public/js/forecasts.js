@@ -1,5 +1,8 @@
 var isRaining;
 
 isRaining = function(){
-  $('body').css("background-image", "url(assets/images/IIR_is_raining.jpg)")
+  var helper = new Helpers;
+  helper.updateBkImg("url(assets/images/IIR_is_raining.jpg)");
+  helper.clearContent();
 }
+
