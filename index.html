@@ -5,11 +5,17 @@
   <link rel="shortcut icon" href="assets/images/favicon.ico">
   <link rel="stylesheet" href="public/css/application.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="public/js/listeners.js"></script>
   <script src="public/js/application.js"></script>
 </head>
 <body>
   <div id="main-content">
-    <h1 class="cloud-text" class="content">Is It Raining?</h1>
+    <h1 class="cloud-text">Is It Raining?</h1>
+    <form id="zipcode-form" action="/api-request" method="POST" class="form">
+      <label for="address[zip]" class="label">Zip Code:</label>
+      <input type="text" name="address[zip]">
+      <input type="submit" name="submit" value="???" class="button">
+    </form>
   </div>
   <footer>
     <p><a target="_blank" href="https://icons8.com/">Free favicon provided courtesy of icons8</a></p>
