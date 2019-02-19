@@ -9,9 +9,7 @@ helpers do
     response = HTTParty.get(route_address, format: :plain)
     parsed = JSON.parse(response, symbolize_names: true)
     weather_code = parsed[:list][0][:weather][0][:id]
-    p "Weather_code:"
-    p weather_code
-    p rain?(weather_code)
+    rain?(weather_code)
   end
 
   def rain?(forecast)
