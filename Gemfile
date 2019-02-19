@@ -28,3 +28,5 @@ group :test, :development do
   gem 'faker'
 end
 
+
+gem "httparty", "~> 0.16.4"
