@@ -10,4 +10,5 @@ var Helpers = function(){
   this.updateContent = function(txt){
     $('#main-content').html("<h1 class='cloud-text'>" + txt + "</h1>");
   }
+
 }

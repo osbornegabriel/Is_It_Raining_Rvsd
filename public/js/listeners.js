@@ -6,6 +6,7 @@ addressFormListener = function(){
 
   $('#zipcode-form').on('submit', function(e){
     e.preventDefault();
-    apiHandler.weatherCall(e);
+    $form = $(this);
+    apiHandler.weatherCall($form);
   })
 }

@@ -8,23 +8,24 @@ var ApiHandler = function(){
     apiCall(weatherForm, weatherResponse);
   }
 
-  apiCall = function(form, respFunc){
-    var $form = $(form);
+  apiCall = function($form, respFunc){
+    // var $form = $(form);
     var formMethod = $form.attr("method");
-    var formUrl = $form.attr("url");
+    var formUrl = $form.attr("action");
     var formData = $form.serialize();
     $.ajax({
       method: formMethod,
       url: formUrl,
-      data: formData
+      data: formData,
     }).done(respFunc)
     .fail(requestFail)
   }
 
   weatherResponse = function(response){
     var forecast = new Forecast();
-    console.log("Showing response: " + response);
-    forecast.predictRain(response);
+    //Boolean response was sent back as String
+    raining = (String(response) == "true");
+    forecast.predictRain(raining);
   }
 
   requestFail = function(failResponse){
