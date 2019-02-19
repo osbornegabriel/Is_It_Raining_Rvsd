@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'bcrypt'
+# gem 'bcrypt'
+gem 'dotenv', '~> 2.6'
 
 # PostgreSQL driver
 gem 'pg', '~> 0.20'
@@ -30,3 +31,5 @@ end
 
 
 gem "httparty", "~> 0.16.4"
+
+gem "dotenv", "~> 2.6"
