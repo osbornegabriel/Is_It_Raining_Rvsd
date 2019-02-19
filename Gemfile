@@ -1,9 +1,10 @@
 source 'https://rubygems.org'
 
-gem 'bcrypt'
+# gem 'bcrypt'
+gem 'dotenv', '~> 2.6'
 
 # PostgreSQL driver
-gem 'pg'
+gem 'pg', '~> 0.20'
 
 # Sinatra driver
 gem 'sinatra', '~> 1.0'
@@ -28,3 +29,7 @@ group :test, :development do
   gem 'faker'
 end
 
+
+gem "httparty", "~> 0.16.4"
+
+gem "dotenv", "~> 2.6"
