@@ -17,11 +17,13 @@ var ApiHandler = function(){
       method: formMethod,
       url: formUrl,
       data: formData
-    }).done(respFunc).fail(requestFail)
+    }).done(respFunc)
+    .fail(requestFail)
   }
 
   weatherResponse = function(response){
-    forecast = new Forecast();
+    var forecast = new Forecast();
+    console.log("Showing response: " + response);
     forecast.predictRain(response);
   }
 
