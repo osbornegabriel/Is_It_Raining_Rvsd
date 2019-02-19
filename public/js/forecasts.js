@@ -1,5 +1,5 @@
 var isRaining;
-var rainStatus
+var rainStatus;
 
 var Forecasts = function() {
 

@@ -1,0 +1,4 @@
+get '/forecasts' do
+
+
+end
