@@ -1,7 +1,7 @@
-var isRaining;
-var rainStatus
-
-var Forecasts = function() {
+var Forecast = function() {
+  var changeStatus;
+  var isRaining;
+  var notRaining;
 
   this.predictRain = function(rainStatus){
     changeStatus(rainStatus);
