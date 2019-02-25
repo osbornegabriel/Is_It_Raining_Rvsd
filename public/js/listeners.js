@@ -14,4 +14,5 @@ addressFormListener = function(){
 
 geolocateListener = function(navigator){
   setTimeout(function(){console.log(this.latitude);}, 4000);
+
 }
