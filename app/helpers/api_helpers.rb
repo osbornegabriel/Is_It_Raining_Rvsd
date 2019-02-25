@@ -4,8 +4,19 @@ require 'json'
 helpers do
   # include HTTParty
 
-  def weather_call(zipcode)
+  def zip_weather_call(zipcode)
     route_address = "http://api.openweathermap.org/data/2.5/forecast?zip=#{zipcode},us&APPID=#{ENV['WEATHERMAP_API']}"
+    weather_call(route_address)
+  end
+
+  def gps_weather_call(longitude,latitude)
+    p "Inside gps_weather_call"
+    route_address = "http://api.openweathermap.org/data/2.5/forecast?lat=#{latitude}&lon=#{longitude}&APPID=#{ENV['WEATHERMAP_API']}"
+    weather_call(route_address)
+  end
+
+  def weather_call(route_address)
+    p route_address
     response = HTTParty.get(route_address, format: :plain)
     parsed = JSON.parse(response, symbolize_names: true)
     weather_code = parsed[:list][0][:weather][0][:id]

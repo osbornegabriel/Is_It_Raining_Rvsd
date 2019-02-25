@@ -2,17 +2,36 @@ var ApiHandler = function(){
   var apiCall;
   var weatherResponse;
   var requestFail;
+  var ajaxCall;
+  var processForm;
+
+  this.navWeatherCall = function(latitude,longitude){
+    var formMethod = "POST";
+    var formUrl = "/forecasts";
+    var data = createNavData(latitude,longitude);
+    console.log(data);
+    ajaxCall(formMethod, formUrl, data, weatherResponse);
+  }
 
   this.weatherCall = function(weatherForm){
     // weatherForm has data of local user's zipcode
-    apiCall(weatherForm, weatherResponse);
+    processForm(weatherForm, weatherResponse);
   }
 
-  apiCall = function($form, respFunc){
-    // var $form = $(form);
+  function createNavData(longitude,latitude){
+    longData = "address%5Blongitude%5D=" + longitude;
+    latData = "address%5Blatitude%5D=" + latitude;
+    return longData + "&" + latData;
+  }
+
+  processForm = function($form, respFunc){
     var formMethod = $form.attr("method");
     var formUrl = $form.attr("action");
     var formData = $form.serialize();
+    ajaxCall(formMethod, formUrl, formData, respFunc);
+  }
+
+  ajaxCall = function(formMethod, formUrl, formData, respFunc){
     $.ajax({
       method: formMethod,
       url: formUrl,
@@ -31,6 +50,7 @@ var ApiHandler = function(){
   requestFail = function(failResponse){
     console.log("API call failed");
     console.log(failResponse);
+    console.log(failResponse.statusText);
   }
 }
 
