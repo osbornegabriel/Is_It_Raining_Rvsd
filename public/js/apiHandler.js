@@ -9,6 +9,7 @@ var ApiHandler = function(){
     var formMethod = "POST";
     var formUrl = "/forecasts";
     var data = createNavData(latitude,longitude);
+    console.log(data);
     ajaxCall(formMethod, formUrl, data, weatherResponse);
   }
 
@@ -49,6 +50,7 @@ var ApiHandler = function(){
   requestFail = function(failResponse){
     console.log("API call failed");
     console.log(failResponse);
+    console.log(failResponse.statusText);
   }
 }
 

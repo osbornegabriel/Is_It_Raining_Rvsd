@@ -12,7 +12,9 @@ addressFormListener = function(){
   })
 }
 
-geolocateListener = function(navigator){
-  setTimeout(function(){console.log(this.latitude);}, 4000);
-
+geolocateListener = function(){
+  var apiHandler = new ApiHandler();
+  $('.geolocate__button').on('click', function(e){
+    apiHandler.navWeatherCall(window.latitude, window.longitude);
+  })
 }
