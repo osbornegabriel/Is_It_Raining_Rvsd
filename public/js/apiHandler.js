@@ -7,8 +7,9 @@ var ApiHandler = function(){
 
   this.navWeatherCall = function(latitude,longitude){
     var formMethod = "POST";
-    var formURL = "/forecasts";
+    var formUrl = "/forecasts";
     var data = createNavData(latitude,longitude);
+    ajaxCall(formMethod, formUrl, data, weatherResponse);
   }
 
   this.weatherCall = function(weatherForm){
