@@ -15,8 +15,8 @@ var Navigator = function(){
   }
 
   function logCoordinates(position){
-    latitude = position.coords.latitude;
-    longitude = position.coords.longitude;
+    this.latitude = position.coords.latitude;
+    this.longitude = position.coords.longitude;
     // presently logging coordinates for development purposes
     console.log([position.coords.latitude, position.coords.longitude]);
   }

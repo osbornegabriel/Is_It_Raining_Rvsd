@@ -9,7 +9,6 @@ var ApiHandler = function(){
     var formMethod = "POST";
     var formUrl = "/forecasts";
     var data = createNavData(latitude,longitude);
-    console.log(data);
     ajaxCall(formMethod, formUrl, data, weatherResponse);
   }
 
