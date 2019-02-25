@@ -2,7 +2,7 @@
 A cute cloud, who discovers for you whether it's raining
 
 ### Check it out
-_Currently in beta: _
+Currently in beta: 
 [Heroku](https://is-it-raining.herokuapp.com/ "Is It Raining")
 
 ### Next Slices
