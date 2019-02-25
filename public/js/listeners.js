@@ -1,4 +1,5 @@
 var addressFormListener;
+var geolocateListener;
 
 addressFormListener = function(){
   // var forecast = new Forecasts();
@@ -9,4 +10,8 @@ addressFormListener = function(){
     $form = $(this);
     apiHandler.weatherCall($form);
   })
+}
+
+geolocateListener = function(navigator){
+  setTimeout(function(){console.log(this.latitude);}, 4000);
 }
