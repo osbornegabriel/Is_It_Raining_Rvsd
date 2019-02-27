@@ -3,7 +3,7 @@ A cute cloud, who discovers for you whether it's raining
 
 ### Check it out
 Currently in beta: 
-[Heroku](https://is-it-raining.herokuapp.com/ "Is It Raining")
+[Is_It_Raining?](https://is-it-raining.herokuapp.com/ "Is It Raining")
 
 ### Next Slices
 - Only include GPS button option if user has functioning gps
