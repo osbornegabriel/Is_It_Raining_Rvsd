@@ -25,3 +25,14 @@ footer{
   bottom:0;
   right: 12px;
 }
+
+@media (orientation: landscape) {
+  body {
+    background-image: url(/images/IIR_landscape_index_background_beta.png);
+  }
+
+  a {
+    color: red;
+  }
+
+}
