@@ -17,14 +17,17 @@ var Forecast = function() {
 
   isRaining = function(){
     var helper = new Helpers;
-    helper.updateBkImg("url(/images/IIR_is_raining.jpg)");
+    var newBackground;
+    newBackground = helper.isLandscape ? "url(/images/IIR_landscape_is_raining.png)" : "url(/images/IIR_is_raining.jpg)";
+    helper.updateBkImg(newBackground);
     helper.clearContent();
     helper.updateContent('YES!!!')
   }
 
   notRaining = function(){
     var helper = new Helpers;
-    helper.updateBkImg("url(/images/IIR_not_raining.jpg)");
+    newBackground = helper.isLandscape ? "url(/images/IIR_landscape_not_raining.png)" : "url(/images/IIR_not_raining.jpg)";
+    helper.updateBkImg(newBackground);
     helper.clearContent();
     helper.updateContent('No...');
   }
