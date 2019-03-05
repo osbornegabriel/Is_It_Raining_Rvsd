@@ -1,9 +1,17 @@
 body{
   margin: auto;
   padding: 2%;
+  color: white;
+  text-shadow: 1px 1px black;
   background-image: url(/images/IIR_index_background_beta.png);
   background-size: 100% 100%;
   background-attachment: fixed;
+  font-size: 1.1 rem;
+}
+
+a {
+  color: white;
+  text-shadow: 1px 1px #922724;
 }
 
 .cloud-text{
@@ -24,4 +32,16 @@ footer{
   position: absolute;
   bottom:0;
   right: 12px;
+}
+
+@media (orientation: landscape) {
+  body {
+    background-image: url(/images/IIR_landscape_index_background_beta.png);
+  }
+
+  #main-content {
+    top: 20%;
+    bottom: auto;
+  }
+
 }
